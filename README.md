@@ -1,4 +1,4 @@
-# Spring4Shell-POC (CVE-2022-22965)
+# Spring4ShellScanner (CVE-2022-22965)
 ![spring4shell](spring4shell.png)
 
 Spring4Shell (CVE-2022-22965) Scanner
