@@ -1,6 +1,6 @@
+#coding:utf-8
 import re, requests, json
-
-REGEX = r"(https?://\S*?)/(\S*)"
+from constants import REGEX, HEADERS
 
 class Swagger:
     def __init__(self, schema):
@@ -15,7 +15,7 @@ class Swagger:
 def getSchema(url):
     try:
         reg = re.match(REGEX, url)
-        res = requests.get(url)
+        res = requests.get(url, headers=HEADERS)
         if res.status_code == 200:
             return reg[1], res.json()
         else:
